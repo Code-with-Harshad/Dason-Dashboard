@@ -1,0 +1,1614 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Dashboard</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<script type="text/javascript" src="js/popper.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="dashcss.css">
+	<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@700;@400;@600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="font/css/font-awesome.min.css">
+</head>
+<body id="universe">
+
+	<div class="main_nav">
+
+		<div><img src="logo.png" height="24px" width="24px"></div>
+		<div class="menu_hide" onclick="open_canvas2(this);"><i class="fa fa-bars isize" aria-hidden="true"></i></div>
+		<div class="logo-text">DASON</div>
+		<div class="menu" onclick="open_canvas(this);"><i class="fa fa-bars isize" aria-hidden="true"></i></div>
+		<div class="search_div"><input type="text" name="inp_search" placeholder="Search..." class="search_bar">
+			<button class="search_button"><i class="fa fa-search" aria-hidden="true"></i></button></div>
+		<button class="only_search"><i class="fa fa-search fa-lg" aria-hidden="true"></i></button>
+
+		<div class="flags flag" id="flag_head" onclick="flag(this,all_flags,flag_head);"><div class="us_flag"></div>
+		<div class="all_flags calling" id="all_flags">
+		<div class="flexing_div"><div class="general_flag usa"></div><span class="flag-text">English</span></div>
+		<div class="flexing_div"><div class="general_flag spain"></div><span class="flag-text">Spanish</span></div>
+		<div class="flexing_div"><div class="general_flag german"></div><span class="flag-text">German</span></div>
+		<div class="flexing_div"><div class="general_flag italian"></div><span class="flag-text">Italian</span></div>
+		<div class="flexing_div"><div class="general_flag russian"></div><span class="flag-text">Russian</span></div>
+		</div>
+			</div>
+
+		<div class="flags moon"><div class="us_flag moon_img"></div></div>
+
+		<div class="flags app" id="btn" onclick="flag(this,app_dropdown,btn);"><div class="us_flag app_icon"></div>
+
+		<div class="app_dropdown calling" id="app_dropdown">
+			<div class="flexing">
+				<div class="app_list"><div class="app_image"></div><span class="flag-text app-f">GitHub</span></div>
+				<div class="app_list"><div class="app_image bit"></div><span class="flag-text app-f">Bitbucket</span></div>
+				<div class="app_list"><div class="app_image drib"></div><span class="flag-text app-f">Dribble</span></div>
+			</div>
+			<div class="flexing">
+			<div class="app_list"><div class="app_image drop"></div><span class="flag-text app-f">Dropbox</span></div>
+			<div class="app_list"><div class="app_image mail"></div><span class="flag-text app-f">Mail Chimp</span></div>
+			<div class="app_list"><div class="app_image slack"></div><span class="flag-text app-f">Slack</span></div>
+			</div>
+		</div>
+
+	</div>
+
+		<div class="flags bell" id="btn2" onclick="flag(this,notify,btn2);"><span class="circle">5</span>
+			<div class="us_flag bell_icon"></div>
+			<div id="notify" class="calling">
+		<div class="notify ">
+			<div class="notify_head">Notifications<div class="auto">Unread(3)</div></div>
+			<div class="notify_content">
+				<div class="inside_content">
+
+				<div class="notify_item">
+					<div class="bell_image bell_image1"></div>
+					<div>
+						<span class="head_name">James Lemire</span><br>
+						<span class="name_details">It will seem like simplified English.</span><br>
+						<span class="name_details"><i class="fa fa-clock-o" aria-hidden="true"></i> 1 hours ago</span><br>
+					</div>
+				</div>
+
+				<div class="notify_item">
+					<div class="bell_image img_bg"><div class="bell_image2 bell_image"></div> </div>
+					<div>
+						<span class="head_name">Your order is placed</span><br>
+						<span class="name_details">If several languages coalesce the grammar</span><br>
+						<span class="name_details"><i class="fa fa-clock-o" aria-hidden="true"></i> 3 min ago</span><br>
+					</div>
+				</div>
+
+				<div class="notify_item">
+					<div class="bell_image img_bg2"><div class="bell_image2 bell_image bell_image3"></div> </div>
+					<div>
+						<span class="head_name">Your order is placed</span><br>
+						<span class="name_details">If several languages coalesce the grammar</span><br>
+						<span class="name_details"><i class="fa fa-clock-o" aria-hidden="true"></i> 3 min ago</span><br>
+					</div>
+				</div>
+
+				<div class="notify_item">
+					<div class="bell_image bell_image4"></div>
+					<div>
+						<span class="head_name">Salena Layfield</span><br>
+						<span class="name_details">As a skeptical Cambridge friend of mine accidental</span><br>
+						<span class="name_details"><i class="fa fa-clock-o" aria-hidden="true"></i> 1 hours ago</span><br>
+					</div>
+				</div>
+
+			</div>
+			</div>
+			<div class="notify_footer"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> View More..</div>
+		</div>
+	</div>
+
+	</div>
+
+		<div class="flags setting" onclick="setting(this,set_can);"><div class="us_flag setting_icon"></div></div>
+
+<div class="profile" id="btn6"  onclick="flag(this,profile_tab,btn6)">
+	<div class="pro_img"></div><div class="pro_name">Paul K. <i class="fa fa-angle-down" aria-hidden="true"></i></div>
+<div class="profile_tab calling" id="profile_tab">
+	<div class="profile_items"><i class="fa fa-user right fa-lg" aria-hidden="true"></i>Profile</div>
+	<div class="profile_items extra_pad"><i class="fa fa-lock right fa-lg" aria-hidden="true"></i>Lock screen</div>
+	<div class="profile_items extra"><i class="fa fa-sign-out right fa-lg" aria-hidden="true"></i>Logout</div>
+</div>
+</div>
+</div>
+
+	<div class="off_canvas" id="off_canvas">
+		<div class="sub_offcanvas" id="off_canvas2">
+		<div class="head_menu">Menu</div>
+		<div class="sub_menu_main same_col" onclick="open_page(this,'dash','dash_icon')"><div class="menu_icon" id="dash_icon"></div><div>Dashboard</div><div class="menu_circle">9+</div></div>
+		<div class="head_menu">Apps</div>
+
+	<div class="sub_menu sub_every" onclick="accord1(this,content1,icon1)">
+		<div class="menu_icon cart_icon"></div><div class="chev">Ecommerce</div>
+		<div class="cart_arrow"><i class="fa fa-chevron-right chev iconing" id="icon1" aria-hidden="true"></i></div></div>
+			<div class="content" id="content1">
+				<div class="accord_items same_col" onclick="open_page(this,'products_page1')">Products</div>
+				<div class="accord_items same_col" onclick="open_page(this,'products_page2')">Order</div>
+				<div class="accord_items same_col" onclick="open_page(this,'products_page3')">Checkout</div>
+			</div>
+
+			<div class="sub_menu sub_every">
+		<div class="menu_icon cart_icon chat_icon"></div><div class="chev">Chat</div>
+	</div>
+
+	<div class="sub_menu sub_every" onclick="accord1(this,content2,icon2)">
+		<div class="menu_icon cart_icon email_icon"></div><div class="chev">Email</div>
+		<div class="cart_arrow"><i class="fa fa-chevron-right chev iconing" id="icon2" aria-hidden="true"></i></div></div>
+			<div class="content" id="content2">
+				<div class="accord_items">Inbox</div>
+				<div class="accord_items">Read Email</div>
+			</div>
+
+			<div class="sub_menu sub_every">
+				<div class="menu_icon cart_icon calendar_icon"></div><div class="chev">Calendar</div>
+			</div>
+
+			<div class="sub_menu sub_every" onclick="accord1(this,content3,icon3)">
+				<div class="menu_icon cart_icon contacts_icon"></div><div class="chev">Contacts</div>
+				<div class="cart_arrow"><i class="fa fa-chevron-right chev iconing" id="icon3" aria-hidden="true"></i></div></div>
+					<div class="content" id="content3">
+						<div class="accord_items">User Grid</div>
+						<div class="accord_items">User List</div>
+						<div class="accord_items">Profile</div>
+					</div>
+
+		<div class="sub_menu sub_every" onclick="accord1(this,content4,icon4)">
+			<div class="menu_icon cart_icon tasks_icon"></div><div class="chev">Tasks</div>
+				<div class="cart_arrow"><i class="fa fa-chevron-right chev iconing" id="icon4" aria-hidden="true"></i></div></div>
+					<div class="content" id="content4">
+						<div class="accord_items">Task list</div>
+							<div class="accord_items">Kanban Board</div>
+							<div class="accord_items">Create Task</div>
+							</div>	
+							
+		<div class="head_menu">Pages</div>
+		
+		<div class="sub_menu sub_every" onclick="accord1(this,content5,icon5)">
+			<div class="menu_icon cart_icon authentication_icon"></div><div class="chev">Authentication</div>
+				<div class="cart_arrow"><i class="fa fa-chevron-right chev iconing" id="icon5" aria-hidden="true"></i></div></div>
+					<div class="content" id="content5">
+							<div class="accord_items">Login</div>
+							<div class="accord_items">Register</div>
+							<div class="accord_items">Recover Password</div>
+							<div class="accord_items">Lock Screen</div>
+							<div class="accord_items">Log Out</div>
+							<div class="accord_items">Confirm Mail</div>
+							<div class="accord_items">Email Verification</div>
+							<div class="accord_items">Two Step Verification</div>
+							</div>
+
+		<div class="sub_menu sub_every" onclick="accord1(this,content6,icon6)">
+			<div class="menu_icon cart_icon pages_icon"></div><div class="chev">Pages</div>
+				<div class="cart_arrow"><i class="fa fa-chevron-right chev iconing" id="icon6" aria-hidden="true"></i></div></div>
+					<div class="content" id="content6">
+							<div class="accord_items">Starter Page</div>
+							<div class="accord_items">Maintenance</div>
+							<div class="accord_items">Coming Soon</div>
+							<div class="accord_items">Timeline</div>
+							<div class="accord_items">FAQs</div>
+							<div class="accord_items">Pricing</div>
+							<div class="accord_items">Error 404</div>
+							<div class="accord_items">Error 500</div>
+							</div>
+
+		<div class="sub_menu sub_every">
+				<div class="menu_icon cart_icon table_icon"></div><div class="chev">Horizontal</div>
+			</div>		
+
+		<div class="head_menu">Components</div>
+
+		<div class="sub_menu sub_every" onclick="accord1(this,content7,icon7)">
+			<div class="menu_icon cart_icon bootstrap_icon"></div><div class="chev">Bootstrap</div>
+				<div class="cart_arrow"><i class="fa fa-chevron-right chev iconing" id="icon7" aria-hidden="true"></i></div></div>
+					<div class="content" id="content7">
+							<div class="accord_items">Alerts</div>
+							<div class="accord_items">Buttons</div>
+							<div class="accord_items">Cards</div>
+							<div class="accord_items">Carousel</div>
+							<div class="accord_items">Dropdowns</div>
+							<div class="accord_items">Grid</div>
+							<div class="accord_items">Images</div>
+							<div class="accord_items">Modals</div>
+							<div class="accord_items">Offcanvas</div>
+							<div class="accord_items">Progress Bars</div>
+							<div class="accord_items">Placeholders</div>
+							<div class="accord_items">Tabs & Accordions</div>
+							<div class="accord_items">Typography</div>
+							<div class="accord_items">Video</div>
+							<div class="accord_items">General</div>
+							<div class="accord_items">Colors</div>
+							</div>
+
+		<div class="sub_menu sub_every" onclick="accord1(this,content8,icon8)">
+			<div class="menu_icon cart_icon extended_icon"></div><div class="chev">Extended</div>
+				<div class="cart_arrow"><i class="fa fa-chevron-right chev iconing" id="icon8" aria-hidden="true"></i></div></div>
+					<div class="content" id="content8">
+							<div class="accord_items">Lightbox</div>
+							<div class="accord_items">Range Slider</div>
+							<div class="accord_items">SweetAlert2</div>
+							<div class="accord_items">Session Timeout</div>
+							<div class="accord_items">Rating</div>
+							<div class="accord_items">Notifications</div>
+							</div>
+
+		<div class="sub_menu sub_every  flexing">
+				<div class="menu_icon cart_icon forms_icon"></div><div class="chev">Forms</div><div class="menu_circle red">7</div>
+			</div>	
+
+		<div class="sub_menu sub_every" onclick="accord1(this,content9,icon9)">
+			<div class="menu_icon cart_icon tables_icon"></div><div class="chev">Tables</div>
+				<div class="cart_arrow"><i class="fa fa-chevron-right chev iconing" id="icon9" aria-hidden="true"></i></div></div>
+					<div class="content" id="content9">
+							<div class="accord_items">Bootstrap Basic</div>
+							<div class="accord_items">DataTables</div>
+							<div class="accord_items">Responsive</div>
+							<div class="accord_items">Editable</div>
+							</div>
+
+		<div class="sub_menu sub_every" onclick="accord1(this,content10,icon10)">
+			<div class="menu_icon cart_icon charts_icon"></div><div class="chev">Charts</div>
+				<div class="cart_arrow"><i class="fa fa-chevron-right chev iconing" id="icon10" aria-hidden="true"></i></div></div>
+					<div class="content" id="content10">
+							<div class="accord_items">Apexcharts</div>
+							<div class="accord_items">Echarts</div>
+							<div class="accord_items">Chartjs</div>
+							<div class="accord_items">Jquery Knob</div>
+							<div class="accord_items">Sparkline</div>
+							</div>
+
+		<div class="sub_menu sub_every" onclick="accord1(this,content11,icon11)">
+			<div class="menu_icon cart_icon icons_icon"></div><div class="chev">Icons</div>
+				<div class="cart_arrow"><i class="fa fa-chevron-right chev iconing" id="icon11" aria-hidden="true"></i></div></div>
+					<div class="content" id="content11">
+							<div class="accord_items">Feather</div>
+							<div class="accord_items">Boxicons</div>
+							<div class="accord_items">Material Design</div>
+							<div class="accord_items">Dripicons</div>
+							<div class="accord_items">Font Awesome 5</div>
+							</div>
+
+		<div class="sub_menu sub_every" onclick="accord1(this,content12,icon12)">
+			<div class="menu_icon cart_icon maps_icon"></div><div class="chev">Maps</div>
+				<div class="cart_arrow"><i class="fa fa-chevron-right chev iconing" id="icon12" aria-hidden="true"></i></div></div>
+					<div class="content" id="content12">
+						<div class="accord_items">Google</div>
+							<div class="accord_items">Vector</div>
+							<div class="accord_items">Leaflet</div>
+							</div>	
+
+		<div class="sub_menu sub_every" onclick="accord1(this,content13,icon13)">
+		<div class="menu_icon cart_icon share_icon"></div><div class="chev">Multi Level</div>
+		<div class="cart_arrow"><i class="fa fa-chevron-right chev iconing" id="icon13" aria-hidden="true"></i></div></div>
+			<div class="content" id="content13">
+		<div class="accord_items">Level 1.1</div>
+		<div class="accord_items flexing" onclick="accord2(this);">Level 1.2 
+			<div class="cart_arrow"><i class="fa fa-chevron-right chev iconing2" id="icon14" aria-hidden="true"></i></div></div>
+			</div>
+			<div class="small_content" id="content14">
+		<div class="accord_items pads">Level 2.1</div>
+		<div class="accord_items pads">Level 2.2</div>
+			</div>
+
+	</div>
+	</div> <!-- main_offcanvas -->
+
+	<div class="icon_menu">
+
+	<div class="home">
+		<div class="menu_icon image1"></div>
+		<div class="inside">
+			<div class="things">Dashboard</div>
+		</div>
+	</div>
+
+	<div class="home">
+		<div class="menu_icon cart_icon image1"></div>
+		<div class="inside">
+			<div class="things">Ecommerce</div>
+			<div class="things items_list same_col" onclick="open_page(this,'products_page1')" >Products</div>
+			<div class="things items_list same_col" onclick="open_page(this,'products_page2')" >Orders</div>
+			<div class="things items_list same_col" onclick="open_page(this,'products_page3')" >Checkout</div>
+		</div>
+	</div>
+
+	<div class="home">
+		<div class="menu_icon cart_icon chat_icon image1"></div>
+		<div class="inside">
+			<div class="things">Chat</div>
+		</div>
+	</div>
+
+	<div class="home">
+		<div class="menu_icon cart_icon email_icon image1"></div>
+		<div class="inside">
+			<div class="things">Email</div>
+			<div class="things items_list">Inbox</div>
+			<div class="things items_list">Read Email</div>
+		</div>
+	</div>
+
+	<div class="home">
+		<div class="menu_icon cart_icon calendar_icon image1"></div>
+		<div class="inside">
+			<div class="things">Calendar</div>
+		</div>
+	</div>
+
+	<div class="home">
+		<div class="menu_icon cart_icon contacts_icon image1"></div>
+		<div class="inside">
+			<div class="things">Contacts</div>
+			<div class="things items_list">User grid</div>
+			<div class="things items_list">User list</div>
+			<div class="things items_list">Profile</div>
+		</div>
+	</div>
+
+	<div class="home">
+		<div class="menu_icon cart_icon tasks_icon image1"></div>
+		<div class="inside">
+			<div class="things">Tasks</div>
+			<div class="things items_list">Task list</div>
+			<div class="things items_list">Kanban Board</div>
+			<div class="things items_list">Create Task</div>
+		</div>
+	</div>
+
+	<div class="home">
+		<div class="menu_icon cart_icon authentication_icon image1"></div>
+		<div class="inside">
+			<div class="things">Authentication</div>
+			<div class="things items_list">Login</div>
+			<div class="things items_list">Register</div>
+			<div class="things items_list">Recover Password</div>
+			<div class="things items_list">Lock Screen</div>
+			<div class="things items_list">Log Out</div>
+			<div class="things items_list">Confirm Mail</div>
+			<div class="things items_list">Email Verification</div>
+			<div class="things items_list">Two Step Verification</div>
+		</div>
+	</div>
+
+	<div class="home">
+		<div class="menu_icon cart_icon pages_icon image1"></div>
+		<div class="inside">
+			<div class="things">Pages</div>
+			<div class="things items_list">Starter Page</div>
+			<div class="things items_list">Maintenance</div>
+			<div class="things items_list">Coming Soon</div>
+			<div class="things items_list">Timeline</div>
+			<div class="things items_list">FAQs</div>
+			<div class="things items_list">Pricing</div>
+			<div class="things items_list">Error 404</div>
+			<div class="things items_list">Error 500</div>
+		</div>
+	</div>
+
+	<div class="home">
+		<div class="menu_icon cart_icon table_icon image1"></div>
+		<div class="inside">
+			<div class="things">Horizontal</div>
+		</div>
+	</div>
+
+	<div class="home">
+		<div class="menu_icon cart_icon bootstrap_icon image1"></div>
+		<div class="inside">
+			<div class="things">Bootstrap</div>
+			<div class="things items_list">Alerts</div>
+			<div class="things items_list">Buttons</div>
+			<div class="things items_list">Cards</div>
+			<div class="things items_list">Carousel</div>
+			<div class="things items_list">Dropdowns</div>
+			<div class="things items_list">Grid</div>
+			<div class="things items_list">Images</div>
+			<div class="things items_list">Modals</div>
+			<div class="things items_list">Offcanvas</div>
+			<div class="things items_list">Progress Bars</div>
+			<div class="things items_list">Placeholders</div>
+			<div class="things items_list">Tabs & Accordions</div>
+			<div class="things items_list">Typography</div>
+			<div class="things items_list">Video</div>
+			<div class="things items_list">General</div>
+			<div class="things items_list">Colors</div>
+		</div>
+	</div>
+
+	<div class="home">
+		<div class="menu_icon cart_icon extended_icon image1"></div>
+		<div class="inside">
+			<div class="things">Extended</div>
+			<div class="things items_list">Lightbox</div>
+			<div class="things items_list">Range Slider</div>
+			<div class="things items_list">SweetAlert2</div>
+			<div class="things items_list">Session Timeout</div>
+			<div class="things items_list">Rating</div>
+			<div class="things items_list">Notifications</div>
+		</div>
+	</div>
+
+	<div class="home">
+		<div class="menu_icon cart_icon forms_icon image1"></div>
+		<div class="inside">
+			<div class="things">Forms</div>
+			<div class="things items_list">Basic Elements</div>
+			<div class="things items_list">Validation</div>
+			<div class="things items_list">Advanced Plugins</div>
+			<div class="things items_list">Editors</div>
+			<div class="things items_list">File Upload</div>
+			<div class="things items_list">Wizard</div>
+			<div class="things items_list">Mask</div>
+		</div>
+	</div>
+
+	<div class="home">
+		<div class="menu_icon cart_icon tables_icon image1"></div>
+		<div class="inside">
+			<div class="things">Tables</div>
+			<div class="things items_list">Bootstrap Basic</div>
+			<div class="things items_list">DataTables</div>
+			<div class="things items_list">Responsive</div>
+			<div class="things items_list">Editable</div>
+		</div>
+	</div>
+
+	<div class="home">
+		<div class="menu_icon cart_icon charts_icon image1"></div>
+		<div class="inside">
+			<div class="things">Charts</div>
+			<div class="things items_list">Apexcharts</div>
+			<div class="things items_list">Echarts</div>
+			<div class="things items_list">Chartjs</div>
+			<div class="things items_list">Jquery Knob</div>
+			<div class="things items_list">Sparkline</div>
+		</div>
+	</div>
+
+	<div class="home">
+		<div class="menu_icon cart_icon icons_icon image1"></div>
+		<div class="inside">
+			<div class="things">Icons</div>
+			<div class="things items_list">Feather</div>
+			<div class="things items_list">Boxicons</div>
+			<div class="things items_list">Material Design</div>
+			<div class="things items_list">Dripicons</div>
+			<div class="things items_list">Font Awesome 5</div>
+		</div>
+	</div>
+
+	<div class="home">
+		<div class="menu_icon cart_icon maps_icon image1"></div>
+		<div class="inside">
+			<div class="things">Maps</div>
+			<div class="things items_list">Google</div>
+			<div class="things items_list">Vector</div>
+			<div class="things items_list">Leaflet</div>
+		</div>
+	</div>
+
+	<div class="home">
+		<div class="menu_icon cart_icon share_icon image1"></div>
+		<div class="inside">
+			<div class="things">Multi Level</div>
+			<div class="things items_list">Level 1.1</div>
+			<div class="things items_list sub_items_list" onmouseover="fun1();" onmouseout="fun2();">Level 1.2
+			<div class="cart_arrow"><i class="fa fa-chevron-right chev" id="icon14" aria-hidden="true"></i></div>
+		</div>
+			<div class="take" onmouseover="fun3()">
+			<div class="things items_list show_sub">Level 2.1</div>
+			<div class="things items_list show_sub">Level 2.2</div>
+		</div>
+
+		</div>
+	</div>
+
+	</div>
+
+	<div class="setting_offcanvas" id="set_can">
+		<div class="sub_set">
+		<div class="set_head">Theme Customizer<button class="close_set" onclick="close_off(this,set_can)">&times;</button></div>
+			<div class="radio_head pads">Layout</div>
+			<span class="radio_head radio_text"><input type="radio" name="red1">Vertical</span> 
+			<span class="radio_head radio_text"><input type="radio" name="red1">Horizontal</span> 
+			<div class="radio_head pads">Layout Mode</div>
+			<span class="radio_head radio_text"><input type="radio" name="red2">Light</span> 
+			<span class="radio_head radio_text"><input type="radio" name="red2">Dark</span> 
+			<div class="radio_head pads">Layout Width</div>
+			<span class="radio_head radio_text"><input type="radio" name="red3">Fluid</span> 
+			<span class="radio_head radio_text"><input type="radio" name="red3">Boxed</span> 
+			<div class="radio_head pads">Layout Position</div>
+			<span class="radio_head radio_text"><input type="radio" name="red4">Fixed</span> 
+			<span class="radio_head radio_text"><input type="radio" name="red4">Scrollable</span>
+			<div class="radio_head pads">Topbar Color</div>
+			<span class="radio_head radio_text"><input type="radio" name="red5">Light</span> 
+			<span class="radio_head radio_text"><input type="radio" name="red5">Dark</span>
+			<div class="radio_head pads">Sidebar Size</div>
+			<div class="radio_text"><input type="radio" name="red6">Default</div> 
+			<div class="radio_text"><input type="radio" name="red6">Compact</div>
+			<div class="radio_text"><input type="radio" name="red6">Small(Icon View)</div>
+			<div class="radio_head pads">Sidebar Color</div>
+			<div class="radio_text"><input type="radio" name="red7">Light</div> 
+			<div class="radio_text"><input type="radio" name="red7">Dark</div>
+			<div class="radio_text"><input type="radio" name="red7">Brand</div>
+			<div class="radio_head pads">Direction</div>
+			<span class="radio_head radio_text"><input type="radio" name="red8">LTR</span> 
+			<span class="radio_head radio_text"><input type="radio" name="red8">RTL</span>
+		</div>
+	</div>
+
+<div class="black" id="black_div" onclick="every_closure(this,set_can)"></div>
+
+<!-- Main Home Page -->
+
+<div class="dashboard_page products_page" id="dash">
+
+	<div class="page_head mb-3 px-4"><div class="page_heading">Welcome !</div>
+<div class="ms-auto page_pagination">Ecommerce<i class="fa fa-angle-right mx-3" aria-hidden="true"></i> Welcome !</div></div>
+
+<div class="row font_bold p-4">
+	
+<div class="col-xl-3 col-12 p-4">
+	<div class="row dash1">
+
+	<div class="d-flex p-3 col-12 grey_bottom_border align-items-center">
+		<div class="">Customer List</div>
+		<div class="ms-auto medium_grey">All Members <i class="fa fa-angle-down" aria-hidden="true"></i></div>
+	</div>
+
+	<div class="over_flow1 my-3">
+
+	<div class=" d-flex align-items-center  px-2 py-3">
+		<div class="col-xl-3 col-2"><img src="hp1.jpg" class=" dash_img1 img-fluid"></div>
+		<div class="col-7">Randy Matthews<br><span class="medium_grey">Randy@gmail.com</span></div>
+		<div class="col-1 ms-auto d-flex"><i class="fa fa-ellipsis-v ms-auto" aria-hidden="true"></i></div>
+	</div>
+
+	<div class=" d-flex align-items-center  px-2 py-3">
+		<div class="col-xl-3 col-2"><img src="hp2.jpg" class=" dash_img1 img-fluid"></div>
+		<div class="col-7">Vernon Wood<br><span class="medium_grey">Vernon@gmail.com</span></div>
+		<div class="col-1 ms-auto d-flex"><i class="fa fa-ellipsis-v ms-auto" aria-hidden="true"></i></div>
+	</div>
+
+	<div class=" d-flex align-items-center  px-2 py-3">
+		<div class="col-xl-3 col-2"><img src="hp3.jpg" class=" dash_img1 img-fluid"></div>
+		<div class="col-7">Howard Rhoades<br><span class="medium_grey">Howard@gmail.com</span></div>
+		<div class="col-1 ms-auto d-flex"><i class="fa fa-ellipsis-v ms-auto" aria-hidden="true"></i></div>
+	</div>
+
+	<div class=" d-flex align-items-center  px-2 py-3">
+		<div class="col-xl-3 col-2"><img src="bell4.jpg" class=" dash_img1 img-fluid"></div>
+		<div class="col-7">Arthur Zurcher<br><span class="medium_grey">Arthur@gmail.com</span></div>
+		<div class="col-1 ms-auto d-flex"><i class="fa fa-ellipsis-v ms-auto" aria-hidden="true"></i></div>
+	</div>
+
+	<div class=" d-flex align-items-center px-2 py-3">
+		<div class="col-xl-3 col-2"><img src="hp5.jpg" class=" dash_img1 img-fluid"></div>
+		<div class="col-7">Angela Palmer<br><span class="medium_grey">Angela@gmail.com</span></div>
+		<div class="col-1 ms-auto d-flex"><i class="fa fa-ellipsis-v ms-auto" aria-hidden="true"></i></div>
+	</div>
+
+	<div class=" d-flex align-items-center px-2 py-3">
+		<div class="col-xl-3 col-2"><img src="hp6.jpg" class=" dash_img1 img-fluid"></div>
+		<div class="col-7">Dorothy Wimson<br><span class="medium_grey">Dorothy@gmail.com</span></div>
+		<div class="col-1 ms-auto d-flex"><i class="fa fa-ellipsis-v ms-auto" aria-hidden="true"></i></div>
+	</div>
+
+</div>
+
+</div>
+</div>
+
+<div class="col-xl-5 col-12 p-4">
+	<div class="row dash1">
+
+	<div class="d-flex p-3 col-12 grey_bottom_border align-items-center">
+		<div class="">Selling Products</div>
+		<div class="ms-auto"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></div>
+	</div>
+
+<div class="overflow2 my-3">
+<div class="width_div">
+
+<div class=" d-flex align-items-center px-2 py-3 grey_bottom_border">
+		<div class="col-2 mx-3"><img src="store1.png" class="dash_img2 dash_img1 img-fluid"></div>
+		<div class="col-4">Half sleeve T-shirt<br><span class="medium_grey">$240.00</span></div>
+		<div class="col-3 text-center ">Available<br><span class="medium_grey">243K</span></div>
+		<div class="col-3 text-center">
+			<div class="ms-auto">
+   	<i class="fa fa-star gold star_size" aria-hidden="true"></i>
+   	<i class="fa fa-star gold star_size" aria-hidden="true"></i>
+	<i class="fa fa-star gold star_size" aria-hidden="true"></i>
+	<i class="fa fa-star gold star_size" aria-hidden="true"></i>
+	<i class="fa fa-star gold star_size" aria-hidden="true"></i><br>
+	<span class="medium_grey">145 Sales</span>
+	</div>
+		</div>
+	</div>
+
+	<div class=" d-flex align-items-center px-2 py-3 grey_bottom_border">
+		<div class="col-2 mx-3"><img src="store2.png" class="dash_img2 dash_img1 img-fluid"></div>
+		<div class="col-4">Light blue T-shirt<br><span class="medium_grey">$650.00</span></div>
+		<div class="col-3 text-center ">Out Of Stock<br><span class="medium_grey">1,253K</span></div>
+		<div class="col-3 text-center">
+			<div class="ms-auto">
+   	<i class="fa fa-star gold star_size" aria-hidden="true"></i>
+   	<i class="fa fa-star gold star_size" aria-hidden="true"></i>
+	<i class="fa fa-star gold star_size" aria-hidden="true"></i>
+	<i class="fa fa-star gold star_size" aria-hidden="true"></i>
+	<i class="fa fa-star-o gold star_size" aria-hidden="true"></i><br>
+	<span class="medium_grey">260 Sales</span>
+	</div>
+		</div>
+	</div>
+
+	<div class=" d-flex align-items-center px-2 py-3 grey_bottom_border">
+		<div class="col-2 mx-3"><img src="store3.png" class="dash_img2 dash_img1 img-fluid"></div>
+		<div class="col-4">Black Color T-shirt<br><span class="medium_grey">$325.00</span></div>
+		<div class="col-3 text-center ">Available<br><span class="medium_grey">2,586K</span></div>
+		<div class="col-3 text-center">
+			<div class="ms-auto">
+   	<i class="fa fa-star gold star_size" aria-hidden="true"></i>
+   	<i class="fa fa-star gold star_size" aria-hidden="true"></i>
+	<i class="fa fa-star gold star_size" aria-hidden="true"></i>
+	<i class="fa fa-star gold star_size" aria-hidden="true"></i>
+	<i class="fa fa-star gold star_size" aria-hidden="true"></i><br>
+	<span class="medium_grey">220 Sales</span>
+	</div>
+		</div>
+	</div>
+
+	<div class=" d-flex align-items-center px-2 py-3 grey_bottom_border">
+		<div class="col-2 mx-3"><img src="store4.png" class="dash_img2 dash_img1 img-fluid"></div>
+		<div class="col-4">Hoodie (Blue)<br><span class="medium_grey">$170.00</span></div>
+		<div class="col-3 text-center ">Available<br><span class="medium_grey">4,565K</span></div>
+		<div class="col-3 text-center">
+			<div class="ms-auto">
+   	<i class="fa fa-star gold star_size" aria-hidden="true"></i>
+   	<i class="fa fa-star gold star_size" aria-hidden="true"></i>
+	<i class="fa fa-star gold star_size" aria-hidden="true"></i>
+	<i class="fa fa-star gold star_size" aria-hidden="true"></i>
+	<i class="fa fa-star gold star_size" aria-hidden="true"></i><br>
+	<span class="medium_grey">165 Sales</span>
+	</div>
+		</div>
+	</div>
+
+	<div class=" d-flex align-items-center px-2 py-3 grey_bottom_border">
+		<div class="col-2 mx-3"><img src="store5.png" class="dash_img2 dash_img1 img-fluid"></div>
+		<div class="col-4">Half sleeve T-shirt<br><span class="medium_grey">$150.00</span></div>
+		<div class="col-3 text-center ">Out Of Stock<br><span class="medium_grey">5,265K</span></div>
+		<div class="col-3 text-center">
+			<div class="ms-auto">
+   	<i class="fa fa-star gold star_size" aria-hidden="true"></i>
+   	<i class="fa fa-star gold star_size" aria-hidden="true"></i>
+	<i class="fa fa-star gold star_size" aria-hidden="true"></i>
+	<i class="fa fa-star gold star_size" aria-hidden="true"></i>
+	<i class="fa fa-star-o gold star_size" aria-hidden="true"></i><br>
+	<span class="medium_grey">165 Sales</span>
+	</div>
+		</div>
+	</div>
+
+	<div class=" d-flex align-items-center px-2 py-3 grey_bottom_border">
+		<div class="col-2 mx-3"><img src="store6.png" class="dash_img2 dash_img1 img-fluid"></div>
+		<div class="col-4">Green color T-shirt<br><span class="medium_grey">$120.00</span></div>
+		<div class="col-3 text-center ">Available<br><span class="medium_grey">125K</span></div>
+		<div class="col-3 text-center">
+			<div class="ms-auto">
+   	<i class="fa fa-star gold star_size" aria-hidden="true"></i>
+   	<i class="fa fa-star gold star_size" aria-hidden="true"></i>
+	<i class="fa fa-star gold star_size" aria-hidden="true"></i>
+	<i class="fa fa-star gold star_size" aria-hidden="true"></i>
+	<i class="fa fa-star-o gold star_size" aria-hidden="true"></i><br>
+	<span class="medium_grey">165 Sales</span>
+	</div>
+		</div>
+	</div>
+
+</div>
+
+</div>
+
+	</div>
+
+</div>
+
+<div class="col-xl-4 col-12  p-4">
+	<div class="row dash1">
+		<div class="d-flex p-3 col-12 grey_bottom_border align-items-center">
+		<div class="">Chat</div>
+		<button class="ms-auto btn px-4 py-1 btn-outline-secondary medium_grey">Today <i class="fa fa-angle-down" aria-hidden="true"></i></button>
+	</div>
+
+	<div class="over_flow1 my-3">
+
+<div class="d-flex align-items-center mb-4">
+	<div class="col-5 gr_line"></div><div class="col-2 normal text-center">Today</div><div class="col-5 gr_line"></div>
+</div>
+
+<div class="col-12 d-flex gap-2 human">
+	<div class="chat_img me-3"></div>
+	<div class="px-4 chat_btn d-flex align-items-center font_13 normal"><div class="triangle"></div> Good Morning</div>
+<div><i class="fa fa-ellipsis-v normal" aria-hidden="true"></i><br><span class="font_10 time normal">10:00 AM</span></div>
+</div> 
+
+
+	</div>
+
+	</div>
+</div>
+</div>
+
+<div class="footer foot2"><div>2021 <i class="fa fa-copyright" aria-hidden="true"></i> Dason.</div>
+<div class="ms-auto">Design & Developed by <span class="blue_ul">Themesbrand</span></div></div>
+</div>
+
+<!-- page1 -->
+
+<div class="products_page row" id="products_page1">
+	<div class="page_head mb-3 px-4"><div class="page_heading">Products</div>
+<div class="ms-auto page_pagination">Ecommerce<i class="fa fa-angle-right mx-3" aria-hidden="true"></i> Products</div></div>
+
+<div class="container ">
+  <div class="row similar">
+
+    <div class="col-12 col-lg-3 px-4 ">
+      <div class="sorting_div p-3">
+      	<div class="filter mb-3">Filter</div>
+      	<div class="filter mb-3">Clothes</div>
+      	<div class="shop_items my-1"><i class="fa fa-angle-right mx-2" aria-hidden="true"></i>T-shirts</div>
+      	<div class="shop_items my-1"><i class="fa fa-angle-right mx-2" aria-hidden="true"></i>Shirts</div>
+      	<div class="shop_items my-1"><i class="fa fa-angle-right mx-2" aria-hidden="true"></i>Jeans</div>
+      	<div class="shop_items my-1"><i class="fa fa-angle-right mx-2" aria-hidden="true"></i>Jackets</div>
+      	<div class="filter mt-5">Price</div>
+		<input type="range" class="form-range" id="customRange1">
+	<div class="d-flex justify-content-between"><div>0</div><div>250</div><div>500</div><div>750</div><div>1000</div></div>
+      	<div class="filter my-3">Discount</div>
+      	<div class="form-check discount_items">
+  		<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+  		<label class="form-check-label" for="flexCheckDefault">Less than 10%</label>
+		</div>
+		<div class="form-check discount_items">
+  		<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+  		<label class="form-check-label" for="flexCheckDefault">10% or more</label>
+		</div>
+		<div class="form-check discount_items">
+  		<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+  		<label class="form-check-label" for="flexCheckDefault">20% or more</label>
+		</div>
+		<div class="form-check discount_items">
+  		<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+  		<label class="form-check-label" for="flexCheckDefault">30% or more</label>
+		</div>
+		<div class="form-check discount_items">
+  		<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+  		<label class="form-check-label" for="flexCheckDefault">40% or more</label>
+		</div>
+		<div class="form-check discount_items">
+  		<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+  		<label class="form-check-label" for="flexCheckDefault">50% or more</label>
+		</div>
+
+      	<div class="filter mb-3 mt-4">Customer Rating</div>
+
+      	<div class="form-check discount_items">
+  		<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+  		<label class="form-check-label" for="flexCheckDefault">4<i class="fa fa-star mx-1 gold" aria-hidden="true"></i>
+  		& Above</label>
+		</div>
+		<div class="form-check discount_items">
+  		<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+  		<label class="form-check-label" for="flexCheckDefault">3<i class="fa fa-star mx-1 gold" aria-hidden="true"></i>
+  		& Above</label>
+		</div>
+		<div class="form-check discount_items">
+  		<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+  		<label class="form-check-label" for="flexCheckDefault">2<i class="fa fa-star mx-1 gold" aria-hidden="true"></i>
+  		& Above</label>
+		</div>
+		<div class="form-check discount_items">
+  		<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+  		<label class="form-check-label" for="flexCheckDefault">1<i class="fa fa-star mx-1 gold" aria-hidden="true"></i>
+  		</label>
+		</div>
+
+      </div>
+    </div>
+
+    <div class="col-12 col-lg-9 mt-lg-1 mt-3 ">
+    	<div class="row">
+
+    	<div class="clothes mb-1 col-12 col-sm-4">Clothes</div>
+    	<div class="col-12 col-sm-4 d-flex ms-auto me-2">
+    		<div class="search_store"><i class="fa fa-search ms-3 mt-2" aria-hidden="true"></i>
+    			<input type="text" name="search_store" class="inp_search ms-1" placeholder="Search..."></div>
+					<div class="bell_image img_bg app_mg"><div class="app_icon app_height bell_image"></div></div>
+					<i class="fa fa-list mt-2 font_13" aria-hidden="true"></i>
+				</div>
+					</div>
+
+		<div class="row">
+			
+			<div class="col-12 col-sm-6 col-xl-4 p-3">
+				<div class="card pos_card">
+  <img src="store1.png" class="card-img-top card_img_style" alt="...">
+  <div class="percent_tag d-flex justify-content-center align-items-center">-25%</div>
+  <div class="card-body">
+    <p class="card-text clothes">Half sleeve T-shirt</p>
+    	<div class="clothes d-flex"><div class="fake me-2">$500</div>$450
+   <div class="ms-auto">
+   	<i class="fa fa-star gold star_size" aria-hidden="true"></i>
+   	<i class="fa fa-star gold star_size" aria-hidden="true"></i>
+	<i class="fa fa-star gold star_size" aria-hidden="true"></i>
+	<i class="fa fa-star gold star_size" aria-hidden="true"></i>
+	<i class="fa fa-star gold star_size" aria-hidden="true"></i>
+	</div>
+    	</div>
+  </div>
+</div>
+		</div>
+
+			<div class="col-12 col-sm-6 col-xl-4 p-3">
+				<div class="card pos_card" >
+  <img src="store2.png" class="card-img-top card_img_style" alt="...">
+  <div class="card-body">
+    <p class="card-text clothes">Light blue T-shirt</p>
+    	<div class="clothes d-flex"><div class="fake me-2">$240</div>$225
+   <div class="ms-auto">
+   	<i class="fa fa-star gold star_size" aria-hidden="true"></i>
+   	<i class="fa fa-star gold star_size" aria-hidden="true"></i>
+	<i class="fa fa-star gold star_size" aria-hidden="true"></i>
+	<i class="fa fa-star gold star_size" aria-hidden="true"></i>
+	<i class="fa fa-star star_size" aria-hidden="true"></i>
+	</div>
+    	</div>
+  </div>
+</div>
+		</div>
+
+
+			<div class="col-12 col-sm-6 col-xl-4 p-3">
+				<div class="card pos_card" >
+  <img src="store3.png" class="card-img-top card_img_style" alt="...">
+  <div class="percent_tag d-flex justify-content-center align-items-center">-20%</div>
+  <div class="card-body">
+    <p class="card-text clothes">Black Color T-shirt</p>
+    	<div class="clothes d-flex"><div class="fake me-2">$175</div>$152
+   <div class="ms-auto">
+   	<i class="fa fa-star gold star_size" aria-hidden="true"></i>
+   	<i class="fa fa-star gold star_size" aria-hidden="true"></i>
+	<i class="fa fa-star gold star_size" aria-hidden="true"></i>
+	<i class="fa fa-star gold star_size" aria-hidden="true"></i>
+	<i class="fa fa-star star_size" aria-hidden="true"></i>
+	</div>
+    	</div>
+  </div>
+</div>
+		</div>
+
+		<div class="col-12 col-sm-6 col-xl-4 p-3">
+				<div class="card pos_card" >
+  <img src="store4.png" class="card-img-top card_img_style" alt="...">
+  <div class="card-body">
+    <p class="card-text clothes">Hoodie (Blue)</p>
+    	<div class="clothes d-flex"><div class="fake me-2">$150</div>$145
+   <div class="ms-auto">
+   	<i class="fa fa-star gold star_size" aria-hidden="true"></i>
+   	<i class="fa fa-star gold star_size" aria-hidden="true"></i>
+	<i class="fa fa-star gold star_size" aria-hidden="true"></i>
+	<i class="fa fa-star gold star_size" aria-hidden="true"></i>
+	<i class="fa fa-star star_size" aria-hidden="true"></i>
+	</div>
+    	</div>
+  </div>
+</div>
+		</div>
+
+		<div class="col-12 col-sm-6 col-xl-4 p-3">
+				<div class="card pos_card" >
+  <img src="store5.png" class="card-img-top card_img_style" alt="...">
+  <div class="percent_tag d-flex justify-content-center align-items-center">-22%</div>
+  <div class="card-body">
+    <p class="card-text clothes">Half sleeve T-shirt</p>
+    	<div class="clothes d-flex"><div class="fake me-2">$145</div>$138
+   <div class="ms-auto">
+   	<i class="fa fa-star gold star_size" aria-hidden="true"></i>
+   	<i class="fa fa-star gold star_size" aria-hidden="true"></i>
+	<i class="fa fa-star gold star_size" aria-hidden="true"></i>
+	<i class="fa fa-star gold star_size" aria-hidden="true"></i>
+	<i class="fa fa-star star_size" aria-hidden="true"></i>
+	</div>
+    	</div>
+  </div>
+</div>
+		</div>
+
+		<div class="col-12 col-sm-6 col-xl-4 p-3">
+				<div class="card pos_card" >
+  <img src="store6.png" class="card-img-top card_img_style" alt="...">
+  <div class="percent_tag d-flex justify-content-center align-items-center">-28%</div>
+  <div class="card-body">
+    <p class="card-text clothes">Green color T-shirt</p>
+    	<div class="clothes d-flex"><div class="fake me-2">$138</div>$135
+   <div class="ms-auto">
+   	<i class="fa fa-star gold star_size" aria-hidden="true"></i>
+   	<i class="fa fa-star gold star_size" aria-hidden="true"></i>
+	<i class="fa fa-star gold star_size" aria-hidden="true"></i>
+	<i class="fa fa-star gold star_size" aria-hidden="true"></i>
+	<i class="fa fa-star star_size" aria-hidden="true"></i>
+	</div>
+    	</div>
+  </div>
+</div>
+		</div>
+
+		<div class="col-8 col-sm-4 mt-4 m-auto">
+			<nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item">
+      <a class="page-link pagin" href="#" aria-label="Previous">
+        <span aria-hidden="true"><i class="fa fa-angle-left" aria-hidden="true"></i></span>
+      </a>
+    </li>
+    <li class="page-item"><a class="page-link pagin" href="#">1</a></li>
+    <li class="page-item"><a class="page-link pagin blue_bg" href="#">2</a></li>
+    <li class="page-item"><a class="page-link pagin" href="#">3</a></li>
+    <li class="page-item"><a class="page-link pagin" href="#">4</a></li>
+    <li class="page-item"><a class="page-link pagin" href="#">5</a></li>
+    <li class="page-item">
+      <a class="page-link pagin" href="#" aria-label="Next">
+        <span aria-hidden="true"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+      </a>
+    </li>
+  </ul>
+</nav>
+		</div>
+
+		</div> <!-- img row -->
+
+    </div>
+<div class="footer"><div>2021 <i class="fa fa-copyright" aria-hidden="true"></i> Dason.</div>
+<div class="ms-auto">Design & Developed by <span class="blue_ul">Themesbrand</span></div></div>
+   
+  </div> <!-- kam -->
+</div>
+
+
+</div>
+
+<div class="products_page table_page" id="products_page2">
+
+	<div class="page_head mb-3 px-3"><div class="page_heading">Orders</div>
+<div class="ms-auto page_pagination">Ecommerce<i class="fa fa-angle-right mx-3" aria-hidden="true"></i> Orders</div></div>
+	
+	<div class="order_div p-3 mx-3">
+		<div class="flexing">
+			<div class="search_store search_tab"><i class="fa fa-search ms-3 mt-2" aria-hidden="true"></i>
+    			<input type="text" name="search_store" class="inp_search inp_search2 ms-1" placeholder="Search..."></div>
+			<div class="ms-auto"><button class="green_pill">+ Add New Order</button></div>
+		</div>
+		<div class="main_table my-3">
+			<div class="sub_table">
+<table class="tabling row">
+	<tr id="tr1" class="grey tab_border ">
+		<td class="td1 col-1"><span class="form-check">
+			<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></span></td>
+		<td class="td2 col-1">Order ID</td>
+		<td class="td3 col-2">Billing Name</td>
+		<td class="td4 col-2">Date</td>
+		<td class="td5 col-1">Total</td>
+		<td class="td6 col-1">Payment Status</td>
+		<td class="td7 col-2">Payment Method</td>
+		<td class="td8 col-2">View Details</td>
+		<td class="td9 col-1">Action</td>
+	</tr>
+
+	<tr id="tr2" class="tab_border">
+		<td class="td1"><span class="form-check">
+			<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></span></td>
+		<td class="td2">#SK2540</td>
+		<td class="td3">Neal Matthews</td>
+		<td class="td4">07 Oct, 2019</td>
+		<td class="td5">$400</td>
+		<td class="td6"><span class="badge paid">Paid</span></td>
+		<td class="td7"><i class="fa fa-cc-mastercard" aria-hidden="true"></i> Mastercard</td>
+		<td class="td8"><button type="button" class="btn btn-primary btn-sm radius">View Details</button></td>
+		<td class="td9"><i class="fa fa-pencil pencil" aria-hidden="true"></i>
+			<i class="fa fa-trash trash"  onclick="del(this,tr2)" aria-hidden="true"></i>
+		</td>
+	</tr>
+
+	<tr id="tr3" class="tab_border">
+		<td class="td1"><span class="form-check">
+			<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></span></td>
+		<td class="td2">#SK2541</td>
+		<td class="td3">Jamal Burnett</td>
+		<td class="td4">07 Oct, 2019</td>
+		<td class="td5">$380</td>
+		<td class="td6"><span class="badge paid chargeback">Chargeback</span></td>
+		<td class="td7"><i class="fa fa-cc-visa" aria-hidden="true"></i> Visa</td>
+		<td class="td8"><button type="button" class="btn btn-primary btn-sm radius">View Details</button></td>
+		<td class="td9"><i class="fa fa-pencil pencil" aria-hidden="true"></i>
+			<i class="fa fa-trash trash"  onclick="del(this,tr3)" aria-hidden="true"></i>
+		</td>
+	</tr>
+
+	<tr id="tr4" class="tab_border">
+		<td class="td1"><span class="form-check">
+			<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></span></td>
+		<td class="td2">#SK2542</td>
+		<td class="td3">Juan Mitchell</td>
+		<td class="td4">06 Oct, 2019</td>
+		<td class="td5">$384</td>
+		<td class="td6"><span class="badge paid">Paid</span></td>
+		<td class="td7"><i class="fa fa-cc-paypal" aria-hidden="true"></i> Paypal</td>
+		<td class="td8"><button type="button" class="btn btn-primary btn-sm radius">View Details</button></td>
+		<td class="td9"><i class="fa fa-pencil pencil" aria-hidden="true"></i>
+			<i class="fa fa-trash trash"  onclick="del(this,tr4)" aria-hidden="true"></i>
+		</td>
+	</tr>
+
+	<tr id="tr5" class="tab_border">
+		<td class="td1"><span class="form-check">
+			<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></span></td>
+		<td class="td2">#SK2543</td>
+		<td class="td3">Barry Dick</td>
+		<td class="td4">05 Oct, 2019</td>
+		<td class="td5">$412</td>
+		<td class="td6"><span class="badge paid">Paid</span></td>
+		<td class="td7"><i class="fa fa-cc-mastercard" aria-hidden="true"></i> Mastercard</td>
+		<td class="td8"><button type="button" class="btn btn-primary btn-sm radius">View Details</button></td>
+		<td class="td9"><i class="fa fa-pencil pencil" aria-hidden="true"></i>
+			<i class="fa fa-trash trash"  onclick="del(this,tr5)" aria-hidden="true"></i>
+		</td>
+	</tr>
+
+	<tr id="tr6" class="tab_border">
+		<td class="td1"><span class="form-check">
+			<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></span></td>
+		<td class="td2">#SK2544</td>
+		<td class="td3">Ronald Taylor</td>
+		<td class="td4">04 Oct, 2019</td>
+		<td class="td5">$404</td>
+		<td class="td6"><span class="badge paid refund">Refund</span></td>
+		<td class="td7"><i class="fa fa-cc-visa" aria-hidden="true"></i> Visa</td>
+		<td class="td8"><button type="button" class="btn btn-primary btn-sm radius">View Details</button></td>
+		<td class="td9"><i class="fa fa-pencil pencil" aria-hidden="true"></i>
+			<i class="fa fa-trash trash"  onclick="del(this,tr6)" aria-hidden="true"></i>
+		</td>
+	</tr>
+
+	<tr id="tr7" class="tab_border">
+		<td class="td1"><span class="form-check">
+			<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></span></td>
+		<td class="td2">#SK2545</td>
+		<td class="td3">Jacob Hunter</td>
+		<td class="td4">04 Oct, 2019</td>
+		<td class="td5">$392</td>
+		<td class="td6"><span class="badge paid">Paid</span></td>
+		<td class="td7"><i class="fa fa-cc-paypal" aria-hidden="true"></i> Paypal</td>
+		<td class="td8"><button type="button" class="btn btn-primary btn-sm radius">View Details</button></td>
+		<td class="td9"><i class="fa fa-pencil pencil" aria-hidden="true"></i>
+			<i class="fa fa-trash trash"  onclick="del(this,tr7)" aria-hidden="true"></i>
+		</td>
+	</tr>
+
+	<tr id="tr8" class="tab_border">
+		<td class="td1"><span class="form-check">
+			<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></span></td>
+		<td class="td2">#SK2546</td>
+		<td class="td3">William Cruz</td>
+		<td class="td4">03 Oct, 2019</td>
+		<td class="td5">$374</td>
+		<td class="td6"><span class="badge paid">Paid</span></td>
+		<td class="td7"><i class="fa fa-money" aria-hidden="true"></i> COD</td>
+		<td class="td8"><button type="button" class="btn btn-primary btn-sm radius">View Details</button></td>
+		<td class="td9"><i class="fa fa-pencil pencil" aria-hidden="true"></i>
+			<i class="fa fa-trash trash"  onclick="del(this,tr8)" aria-hidden="true"></i>
+		</td>
+	</tr>
+
+	<tr id="tr9" class="tab_border">
+		<td class="td1"><span class="form-check">
+			<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></span></td>
+		<td class="td2">#SK2547</td>
+		<td class="td3">Dustin Moser</td>
+		<td class="td4">02 Oct, 2019</td>
+		<td class="td5">$350</td>
+		<td class="td6"><span class="badge paid">Paid</span></td>
+		<td class="td7"><i class="fa fa-cc-mastercard" aria-hidden="true"></i> Mastercard</td>
+		<td class="td8"><button type="button" class="btn btn-primary btn-sm radius">View Details</button></td>
+		<td class="td9"><i class="fa fa-pencil pencil" aria-hidden="true"></i>
+			<i class="fa fa-trash trash"  onclick="del(this,tr9)" aria-hidden="true"></i>
+		</td>
+	</tr>
+
+	<tr id="tr10">
+		<td class="td1"><span class="form-check">
+			<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></span></td>
+		<td class="td2">#SK2548</td>
+		<td class="td3">Clark Benson</td>
+		<td class="td4">01 Oct, 2019</td>
+		<td class="td5">$345</td>
+		<td class="td6"><span class="badge paid refund">Refund</span></td>
+		<td class="td7"><i class="fa fa-cc-visa" aria-hidden="true"></i> Visa</td>
+		<td class="td8"><button type="button" class="btn btn-primary btn-sm radius">View Details</button></td>
+		<td class="td9"><i class="fa fa-pencil pencil" aria-hidden="true"></i>
+			<i class="fa fa-trash trash"  onclick="del(this,tr10)" aria-hidden="true"></i>
+		</td>
+	</tr>
+
+</table>
+
+</div> <!-- subtabkle -->
+
+</div> <!-- main_table -->
+
+		<div class="col-8 col-md-5 mt-4 ms-auto">
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item">
+      <a class="page-link pagin" href="#" aria-label="Previous">
+        <span aria-hidden="true"><i class="fa fa-angle-left" aria-hidden="true"></i></span>
+      </a>
+    </li>
+    <li class="page-item"><a class="page-link pagin blue_bg" href="#">1</a></li>
+    <li class="page-item"><a class="page-link pagin" href="#">2</a></li>
+    <li class="page-item"><a class="page-link pagin" href="#">3</a></li>
+    <li class="page-item"><a class="page-link pagin" href="#">4</a></li>
+    <li class="page-item"><a class="page-link pagin" href="#">5</a></li>
+    <li class="page-item">
+      <a class="page-link pagin" href="#" aria-label="Next">
+        <span aria-hidden="true"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+      </a>
+    </li>
+  </ul>
+</nav>
+</div>
+
+</div> <!-- orderdiv -->
+
+<div class="footer foot2"><div>2021 <i class="fa fa-copyright" aria-hidden="true"></i> Dason.</div>
+<div class="ms-auto">Design & Developed by <span class="blue_ul">Themesbrand</span></div></div>
+
+</div> <!-- page2div -->
+
+
+<!-- page3 -->
+ 
+<div class="products_page" id="products_page3">
+
+	<div class="page_head mb-3 px-3"><div class="page_heading">Checkout</div>
+<div class="ms-auto page_pagination">Ecommerce<i class="fa fa-angle-right mx-3" aria-hidden="true"></i> Checkout</div></div>
+
+<div class="row p-3">
+<div class="tab1 blue_pane mb-sm-0 mb-3 col-12 col-sm-4 d-flex align-items-center justify-content-center com_tab" onclick="ac_tab(this,'form1')" id="tab1">
+	<div><i class="fa fa-truck flip font_26" aria-hidden="true"></i><br>Shipping Info</div></div>
+
+<div class="tab1 mb-sm-0 mb-3 col-12 col-sm-4 d-flex align-items-center justify-content-center com_tab" onclick="ac_tab(this,'form2')" id="tab1">
+	<div><i class="fa fa-money font_26" aria-hidden="true"></i><br>Payment Info</div></div>
+
+<div class="tab1 mb-sm-0 mb-3 col-12 col-sm-4 d-flex align-items-center justify-content-center com_tab" onclick="ac_tab(this,'form3')" id="tab1">
+	<div><i class="fa fa-check font_26" aria-hidden="true"></i><br>Confirmation</div></div>
+</div>
+
+<div id="form1" class="tabs_all p-4">
+	<div class="main_form row">
+	<div class="form_head px-3 pt-3">Shipping information</div>
+	<div class="light pt-2 px-3">Fill all information below</div>
+<div class="col-12 col-md-6 p-3">
+
+	<div class="mb-3">
+  <label for="formGroupExampleInput" class="form-label medium">Name</label>
+  <input type="text" class="form-control lab" id="formGroupExampleInput" placeholder="Enter your name">
+</div>
+
+<div class="mb-3">
+  <label for="formGroupExampleInput" class="form-label medium">Phone</label>
+  <input type="text" class="form-control lab" id="formGroupExampleInput" placeholder="Enter your Phone no.">
+</div>
+
+<div class="form-group mb-3">
+         <label class="col-form-label medium">Country</label>
+             <select class="form-select select2 medium" title="Country">
+                <option value="0">Select Country</option>
+                <option value="AF">Afghanistan</option>
+                <option value="AL">Albania</option>
+                <option value="DZ">Algeria</option>
+                <option value="AS">American Samoa</option>
+                <option value="AD">Andorra</option>
+                <option value="AO">Angola</option>
+                <option value="AI">Anguilla</option>
+                <option value="AQ">Antarctica</option>
+                <option value="AR">Argentina</option>
+                <option value="AM">Armenia</option>
+                <option value="AW">Aruba</option>
+                <option value="AU">Australia</option>
+                <option value="AT">Austria</option>
+                <option value="AZ">Azerbaijan</option>
+                <option value="BS">Bahamas</option>
+                <option value="BH">Bahrain</option>
+                <option value="BD">Bangladesh</option>
+                <option value="BB">Barbados</option>
+                <option value="BY">Belarus</option>
+                <option value="BE">Belgium</option>
+                <option value="BZ">Belize</option>
+                <option value="BJ">Benin</option>
+                <option value="BM">Bermuda</option>
+                <option value="BT">Bhutan</option>
+                <option value="BO">Bolivia</option>
+                <option value="BW">Botswana</option>
+                <option value="BV">Bouvet Island</option>
+                <option value="BR">Brazil</option>
+                <option value="BN">Brunei Darussalam</option>
+                <option value="BG">Bulgaria</option>
+                <option value="BF">Burkina Faso</option>
+                <option value="BI">Burundi</option>
+                <option value="KH">Cambodia</option>
+                <option value="CM">Cameroon</option>
+                <option value="CA">Canada</option>
+                <option value="CV">Cape Verde</option>
+                <option value="KY">Cayman Islands</option>
+                <option value="CF">Central African Republic</option>
+                <option value="TD">Chad</option>
+                <option value="CL">Chile</option>
+                <option value="CN">China</option>
+                <option value="CX">Christmas Island</option>
+                <option value="CC">Cocos (Keeling) Islands</option>
+                <option value="CO">Colombia</option>
+                <option value="KM">Comoros</option>
+                <option value="CG">Congo</option>
+                <option value="CK">Cook Islands</option>
+                <option value="CR">Costa Rica</option>
+                <option value="CI">Cote d'Ivoire</option>
+                <option value="HR">Croatia (Hrvatska)</option>
+                <option value="CU">Cuba</option>
+                <option value="CY">Cyprus</option>
+                <option value="CZ">Czech Republic</option>
+                <option value="DK">Denmark</option>
+                <option value="DJ">Djibouti</option>
+                <option value="DM">Dominica</option>
+                <option value="DO">Dominican Republic</option>
+                <option value="EC">Ecuador</option>
+                <option value="EG">Egypt</option>
+                <option value="SV">El Salvador</option>
+                <option value="GQ">Equatorial Guinea</option>
+                <option value="ER">Eritrea</option>
+                <option value="EE">Estonia</option>
+                <option value="ET">Ethiopia</option>
+                <option value="FK">Falkland Islands (Malvinas)</option>
+                <option value="FO">Faroe Islands</option>
+                <option value="FJ">Fiji</option>
+                <option value="FI">Finland</option>
+                <option value="FR">France</option>
+                <option value="GF">French Guiana</option>
+                <option value="PF">French Polynesia</option>
+                <option value="GA">Gabon</option>
+                <option value="GM">Gambia</option>
+                <option value="GE">Georgia</option>
+                <option value="DE">Germany</option>
+                <option value="GH">Ghana</option>
+                <option value="GI">Gibraltar</option>
+                <option value="GR">Greece</option>
+                <option value="GL">Greenland</option>
+                <option value="GD">Grenada</option>
+                <option value="GP">Guadeloupe</option>
+                <option value="GU">Guam</option>
+                <option value="GT">Guatemala</option>
+                <option value="GN">Guinea</option>
+                <option value="GW">Guinea-Bissau</option>
+                <option value="GY">Guyana</option>
+                <option value="HT">Haiti</option>
+                <option value="HN">Honduras</option>
+                <option value="HK">Hong Kong</option>
+                <option value="HU">Hungary</option>
+                <option value="IS">Iceland</option>
+                <option value="IN">India</option>
+                <option value="ID">Indonesia</option>
+                <option value="IQ">Iraq</option>
+                <option value="IE">Ireland</option>
+                <option value="IL">Israel</option>
+                <option value="IT">Italy</option>
+                <option value="JM">Jamaica</option>
+                <option value="JP">Japan</option>
+                <option value="JO">Jordan</option>
+                <option value="KZ">Kazakhstan</option>
+                <option value="KE">Kenya</option>
+                <option value="KI">Kiribati</option>
+                <option value="KR">Korea, Republic of</option>
+                <option value="KW">Kuwait</option>
+                <option value="KG">Kyrgyzstan</option>
+                <option value="LV">Latvia</option>
+                <option value="LB">Lebanon</option>
+                <option value="LS">Lesotho</option>
+                <option value="LR">Liberia</option>
+                <option value="LY">Libyan Arab Jamahiriya</option>
+              	<option value="LI">Liechtenstein</option>
+              	<option value="LT">Lithuania</option>
+              	<option value="LU">Luxembourg</option>
+              	<option value="MO">Macau</option>
+              	<option value="MG">Madagascar</option>
+              	<option value="MW">Malawi</option>
+              	<option value="MY">Malaysia</option>
+              	<option value="MV">Maldives</option>
+              	<option value="ML">Mali</option>
+              	<option value="MT">Malta</option>
+              	<option value="MH">Marshall Islands</option>
+              	<option value="MQ">Martinique</option>
+              	<option value="MR">Mauritania</option>
+              	<option value="MU">Mauritius</option>
+              	<option value="YT">Mayotte</option>
+              	<option value="MX">Mexico</option>
+              	<option value="MD">Moldova, Republic of</option>
+                <option value="MC">Monaco</option>
+                <option value="MN">Mongolia</option>
+                <option value="MS">Montserrat</option>
+                <option value="MA">Morocco</option>
+                <option value="MZ">Mozambique</option>
+                <option value="MM">Myanmar</option>
+                <option value="NA">Namibia</option>
+                <option value="NR">Nauru</option>
+                <option value="NP">Nepal</option>
+                <option value="NL">Netherlands</option>
+                <option value="AN">Netherlands Antilles</option>
+                <option value="NC">New Caledonia</option>
+                <option value="NZ">New Zealand</option>
+                <option value="NI">Nicaragua</option>
+                <option value="NE">Niger</option>
+                <option value="NG">Nigeria</option>
+                <option value="NU">Niue</option>
+                <option value="NF">Norfolk Island</option>
+          		<option value="MP">Northern Mariana Islands</option>
+                <option value="NO">Norway</option>
+                <option value="OM">Oman</option>
+                <option value="PW">Palau</option>
+                <option value="PA">Panama</option>
+                <option value="PG">Papua New Guinea</option>
+                <option value="PY">Paraguay</option>
+                <option value="PE">Peru</option>
+                <option value="PH">Philippines</option>
+                <option value="PN">Pitcairn</option>
+                <option value="PL">Poland</option>
+                <option value="PT">Portugal</option>
+                <option value="PR">Puerto Rico</option>
+                <option value="QA">Qatar</option>
+                <option value="RE">Reunion</option>
+                <option value="RO">Romania</option>
+                <option value="RU">Russian Federation</option>
+                <option value="RW">Rwanda</option>
+            <option value="KN">Saint Kitts and Nevis</option>
+                <option value="LC">Saint LUCIA</option>
+                <option value="WS">Samoa</option>
+                <option value="SM">San Marino</option>
+            <option value="ST">Sao Tome and Principe</option>
+                <option value="SA">Saudi Arabia</option>
+                <option value="SN">Senegal</option>
+                <option value="SC">Seychelles</option>
+                <option value="SL">Sierra Leone</option>
+                <option value="SG">Singapore</option>
+         <option value="SK">Slovakia (Slovak Republic)</option>
+                <option value="SI">Slovenia</option>
+                <option value="SB">Solomon Islands</option>
+                <option value="SO">Somalia</option>
+                <option value="ZA">South Africa</option>
+                <option value="ES">Spain</option>
+                <option value="LK">Sri Lanka</option>
+                <option value="SH">St. Helena</option>
+           <option value="PM">St. Pierre and Miquelon</option>
+                <option value="SD">Sudan</option>
+                <option value="SR">Suriname</option>
+                <option value="SZ">Swaziland</option>
+                <option value="SE">Sweden</option>
+                <option value="CH">Switzerland</option>
+            <option value="SY">Syrian Arab Republic</option>
+          <option value="TW">Taiwan, Province of China</option>
+                <option value="TJ">Tajikistan</option>
+       <option value="TZ">Tanzania, United Republic of</option>
+                <option value="TH">Thailand</option>
+                <option value="TG">Togo</option>
+                <option value="TK">Tokelau</option>
+                <option value="TO">Tonga</option>
+                <option value="TT">Trinidad and Tobago</option>
+                <option value="TN">Tunisia</option>
+                <option value="TR">Turkey</option>
+                <option value="TM">Turkmenistan</option>
+         <option value="TC">Turks and Caicos Islands</option>
+                <option value="TV">Tuvalu</option>
+                <option value="UG">Uganda</option>
+                <option value="UA">Ukraine</option>
+         <option value="AE">United Arab Emirates</option>
+                <option value="GB">United Kingdom</option>
+                <option value="US">United States</option>
+                <option value="UY">Uruguay</option>
+                <option value="UZ">Uzbekistan</option>
+                <option value="VU">Vanuatu</option>
+                <option value="VE">Venezuela</option>
+                <option value="VN">Viet Nam</option>
+         <option value="VG">Virgin Islands (British)</option>
+         <option value="VI">Virgin Islands (U.S.)</option>
+         <option value="WF">Wallis and Futuna Islands</option>
+                <option value="EH">Western Sahara</option>
+                <option value="YE">Yemen</option>
+                <option value="ZM">Zambia</option>
+                <option value="ZW">Zimbabwe</option>                                    
+            </select>
+        </div>
+
+        <div class="mb-3">
+  <label for="exampleFormControlTextarea1" class="form-label medium">Order Notes:</label>
+  <textarea class="form-control lab" id="exampleFormControlTextarea1" placeholder="Write some note.." rows="3"></textarea>
+</div>
+
+</div>
+
+<div class="col-12 col-md-6 px-3 pb-3 p-md-3">
+	
+	<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label medium">Email address</label>
+  <input type="email" class="form-control lab" id="exampleFormControlInput1" placeholder="Enter your email">
+</div>
+
+<div class="form-group mb-3">
+         <label class="col-form-label medium">States</label>
+         <select class="form-select select2 medium" title="Country">
+            <option value="0">Select States</option>
+            <option value="AL">Alabama</option>
+            <option value="AK">Alaska</option>
+            <option value="AZ">Arizona</option>
+            <option value="AR">Arkansas</option>
+            <option value="CA">California</option>
+            <option value="CO">Colorado</option>
+            <option value="DE">Delaware</option>
+            <option value="Fl"> Florida</option>
+            <option value="GA">Georgia</option>
+            <option value="HI">Hawaii</option>
+            <option value="MT">Montana</option>
+            <option value="NV">Nevada</option>
+            <option value="NM">New Mexico</option>
+            <option value="NY">New York</option>
+            <option value="NC">North Dakota</option>
+            <option value="TX">Texas</option>
+            <option value="VA">Virginia</option>
+            <option value="WI">Wisconsin</option>
+            <option value="WY">Wyoming</option>
+        </select>
+              </div>
+
+ <div class="mb-3">
+  <label for="exampleFormControlTextarea1" class="form-label medium">Address</label>
+  <textarea class="form-control lab" id="exampleFormControlTextarea1" placeholder="Enter full address" rows="3"></textarea>
+</div>
+
+</div>
+
+
+
+
+</div>
+</div>
+
+<div id="form2" class="tabs_all dn p-4">
+	<div class="main_form ">
+	<div class="form_head px-3 pt-3">Payment information</div>
+	<div class="light pt-2 px-3">Fill all information below</div>
+<div class="row">
+	<div class="form-check pay1 col-6 col-sm-4 col-lg-3 ms-4 mt-4 mb-sm-4">
+  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+  <label class="form-check-label form_head" for="flexRadioDefault2"><i class="fa fa-cc-mastercard" aria-hidden="true"></i> Credit / Debit Card</label>
+</div>
+
+<div class="form-check pay2 col-3 col-lg-2 mt-4 mb-sm-4">
+  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" >
+  <label class="form-check-label form_head" for="flexRadioDefault2"><i class="fa fa-cc-paypal" aria-hidden="true"></i> Paypal</label>
+</div>
+
+<div class="form-check col-12 col-sm-3 ms-4 mb-4 ms-sm-0 my-sm-4">
+  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" >
+  <label class="form-check-label form_head" for="flexRadioDefault2"><i class="fa fa-money" aria-hidden="true"></i> Cash On Delivery</label>
+</div>
+</div>
+
+<div class="ps-4">For Card Payment</div>
+<div class="p-4">
+<div class="p-4 payment_details">
+	
+	<div class="mb-3">
+  <label for="formGroupExampleInput" class="form-label medium">Card Number</label>
+  <input type="text" class="form-control lab" id="formGroupExampleInput" placeholder="0000 0000 0000 0000">
+</div>
+
+<div class="row">
+
+<div class="mb-3 col-12 col-lg-6">
+  <label for="formGroupExampleInput" class="form-label medium">Name on Card</label>
+  <input type="text" class="form-control lab" id="formGroupExampleInput" placeholder="Name on Card">
+</div>
+
+<div class="mb-3 col-12 col-lg-3">
+  <label for="formGroupExampleInput" class="form-label medium">Expiry date</label>
+  <input type="text" class="form-control lab" id="formGroupExampleInput" placeholder="MM/YY">
+</div>
+
+<div class="mb-3 col-12 col-lg-3">
+  <label for="formGroupExampleInput" class="form-label medium">CVV Code</label>
+  <input type="text" class="form-control lab" id="formGroupExampleInput" placeholder="Enter CVV Code">
+</div>
+
+</div>
+
+</div>
+</div>
+</div>
+
+
+</div>
+
+
+
+<div id="form3" class="tabs_all dn ">
+	<div class="main_form p-4 p-sm-5 my-4">
+	<div class="p-0 mb-3">Order Summary</div>
+<div class="row align-items-center">
+	<div class="col-3 checkout_head check_border medium">Product</div>
+	<div class="col-6 checkout_head check_border medium">Product Desc</div>
+	<div class="col-3 checkout_head check_border medium">Price</div>
+</div>
+
+<div class="row">
+	<div class="col-3 check_border">
+		<div class="check_img1"></div>
+	</div>
+	<div class="col-6 check_border">
+		Half sleeve T-shirt (64GB)<br><span class="check_price"> $ 450 &times; 1</span>
+	</div>
+	<div class="col-3 check_border check_price d-flex align-items-center">$ 450</div>
+</div>
+
+<div class="row">
+	<div class="col-3 check_border">
+		<div class="check_img1 check_img2"></div>
+	</div>
+	<div class="col-6 check_border">
+		Wireless Headphone<br><span class="check_price"> $ 225 &times; 1</span>
+	</div>
+	<div class="col-3 check_border check_price d-flex align-items-center">$ 225</div>
+</div>
+
+<div class="row">
+	<div class="col-9 check_border d-flex align-items-center justify-content-end medium">Sub Total:</div>
+	<div class="col-3 check_border check_price d-flex align-items-center ">$ 675</div>
+</div>
+
+<div class="row check_border p-2">
+	<div class="col-6 shipping s1 d-flex align-items-center"><i class="fa fa-truck" aria-hidden="true"></i> Shipping</div>
+	<div class="col-6 shipping s2 d-flex align-items-center justify-content-end">Free</div>
+</div>
+
+<div class="row">
+	<div class="col-9 check_border d-flex align-items-center justify-content-end medium">Total:</div>
+	<div class="col-3 check_border check_price d-flex align-items-center ">$ 675</div>
+</div>
+
+</div>
+
+</div>
+
+<div class="d-flex px-3 font_13">
+<div style="color: #74788D;" class="d-none d-sm-block"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back to Shopping Cart</div>
+<div class="ms-auto"><button type="button" class="btn btn-success font_13"><i class="fa fa-truck" aria-hidden="true"></i>
+Proceed to Shipping</button></div></div>
+
+<div class="footer foot2"><div>2021 <i class="fa fa-copyright" aria-hidden="true"></i> Dason.</div>
+<div class="ms-auto">Design & Developed by <span class="blue_ul">Themesbrand</span></div></div>
+
+</div> <!-- products_page -->
+
+
+
+	<script type="text/javascript" src="dashjs.js"></script>
+
+</body>
+</html>
